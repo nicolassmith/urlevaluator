@@ -5,10 +5,12 @@
     android:versionName="1.0" >
 
     <uses-sdk android:minSdkVersion="15" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name" >
+        android:label="@string/app_name" 
+        android:allowBackup="false">
         <activity
             android:name=".UrlEvaluatorActivity"
             android:label="@string/app_name" >
@@ -16,7 +18,7 @@
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
-                <data android:scheme="http" android:host="www.example.com" />
+                <data android:scheme="http" android:host="goo.gl" />
             </intent-filter>
         </activity>
     </application>
