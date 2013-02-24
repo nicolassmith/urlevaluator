@@ -1,6 +1,5 @@
 package com.github.nicolassmith.urlevaluator;
 
-import android.net.Uri;
 import android.os.AsyncTask;
 
 abstract class EvaluatorTask extends AsyncTask<String,Void,String>{

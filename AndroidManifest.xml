@@ -19,6 +19,10 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
                 <data android:scheme="http" android:host="goo.gl" />
+                <data android:scheme="http" android:host="bit.ly" />
+                <data android:scheme="http" android:host="m.google.com" />
+                <data android:scheme="http" android:host="g.co" />
+                <data android:scheme="http" android:host="tinyurl.com" />
             </intent-filter>
         </activity>
     </application>

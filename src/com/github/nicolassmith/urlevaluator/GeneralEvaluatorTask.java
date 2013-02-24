@@ -2,7 +2,6 @@ package com.github.nicolassmith.urlevaluator;
 
 import java.io.IOException;
 import java.net.*;
-import android.net.Uri;
 import android.util.Log;
 
 public class GeneralEvaluatorTask extends EvaluatorTask {

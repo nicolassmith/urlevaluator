@@ -46,11 +46,17 @@ public class UrlEvaluatorActivity extends Activity implements EvaluatorTaskCalle
 	@Override
 	public void onTaskCompleted(String output) {
 		
-		String toastText = "Redirecting to: " + output;
+		if (output == null) {
+			Toast.makeText(UrlEvaluatorActivity.this, "Couldn't evaluate URL.", Toast.LENGTH_LONG).show();
+			finish();
+			return;
+		}
+		
+		
+		String toastText = "Evaluated as: " + output;
 		Toast.makeText(UrlEvaluatorActivity.this, toastText, Toast.LENGTH_LONG).show();
 		
 		this.updateText(output);
-		
 		this.makeNewUriIntent(output);
 		
 		finish();
