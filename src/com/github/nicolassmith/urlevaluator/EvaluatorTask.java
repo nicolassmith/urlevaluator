@@ -13,11 +13,6 @@ abstract class EvaluatorTask extends AsyncTask<String,Void,String>{
 	
 	public abstract String evaluate(String arg);
 
-	//@Override
-	//protected String doInBackground(String... arg[0]) {		
-	//	return evaluate(arg0[0]);
-	//}
-
 	@Override
 	protected void onPostExecute(String result) {
 		super.onPostExecute(result);
