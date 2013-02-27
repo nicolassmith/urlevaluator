@@ -23,6 +23,7 @@
                 <data android:scheme="http" android:host="m.google.com" />
                 <data android:scheme="http" android:host="g.co" />
                 <data android:scheme="http" android:host="tinyurl.com" />
+                <data android:scheme="http" android:host="youtu.be" />
             </intent-filter>
         </activity>
     </application>
