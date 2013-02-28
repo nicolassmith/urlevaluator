@@ -13,7 +13,7 @@
    height="1052.3622047"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.3.1 r9886"
+   inkscape:version="0.48.4 r9939"
    sodipodi:docname="urlevaluatoricon.svg">
   <defs
      id="defs4">
@@ -33,15 +33,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.49497475"
-     inkscape:cx="584.9839"
+     inkscape:cx="269.81631"
      inkscape:cy="711.85221"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1350"
      inkscape:window-height="927"
-     inkscape:window-x="2109"
-     inkscape:window-y="109"
+     inkscape:window-x="152"
+     inkscape:window-y="25"
      inkscape:window-maximized="0" />
   <metadata
      id="metadata7">
@@ -67,15 +67,15 @@
        x="-35.355339"
        y="-126.44502"
        ry="76.771591"
-       inkscape:export-filename="/home/nicolas/repos/urlevaluator/res/drawable-hdpi/ic_launcher.png"
-       inkscape:export-xdpi="8.0898876"
-       inkscape:export-ydpi="8.0898876" />
+       inkscape:export-filename="C:\Users\nicolas\Documents\GitHub\urlevaluator\assets\png\highresicon.png"
+       inkscape:export-xdpi="57.528091"
+       inkscape:export-ydpi="57.528091" />
     <g
        id="g3159"
        transform="matrix(1.25,0,0,-1.25,490.60798,140.31405)" />
     <g
        id="g3790"
-       transform="matrix(1.6868211,0,0,1.6868211,-415.44281,-385.16162)">
+       transform="matrix(1.6868211,0,0,1.6868211,-389.17884,-298.2885)">
       <g
          transform="matrix(1.2321045,-0.21075717,-0.21075717,-1.2321045,559.61905,826.02519)"
          id="g3163">
@@ -175,15 +175,17 @@
     <flowRoot
        xml:space="preserve"
        id="flowRoot3014"
-       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:#ffffff;font-family:Roboto;-inkscape-font-specification:Roboto;stroke-opacity:1;stroke-width:1.09412348;stroke-miterlimit:4;stroke-dasharray:none"
-       transform="matrix(7.2508969,-0.94167517,0.94167517,7.2508969,1065.3043,-717.03362)"><flowRegion
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#8282ff;fill-opacity:1;stroke:#ffffff;stroke-width:1.64118516;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Roboto;-inkscape-font-specification:Roboto"
+       transform="matrix(8.0797933,-1.0493241,1.0493241,8.0797933,1193.9349,-779.26416)"><flowRegion
          id="flowRegion3016"><rect
            id="rect3018"
            width="490.93414"
            height="155.56349"
            x="-161.6244"
            y="72.514221"
-           style="stroke:#ffffff;stroke-opacity:1;stroke-width:1.09412348;stroke-miterlimit:4;stroke-dasharray:none" /></flowRegion><flowPara
+           style="fill:#8282ff;fill-opacity:1;stroke:#ffffff;stroke-width:1.64118516;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" /></flowRegion><flowPara
          id="flowPara3020"
-         style="font-weight:bold;fill:#00005f;fill-opacity:1;stroke:#ffffff;stroke-opacity:1;stroke-width:1.09412348;stroke-miterlimit:4;stroke-dasharray:none">http://</flowPara></flowRoot>  </g>
+         style="font-weight:bold;fill:#8282ff;fill-opacity:1;stroke:#ffffff;stroke-width:1.64118516;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none">h<flowSpan
+   style="font-style:normal;stroke-width:1.64118516;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;-inkscape-font-specification:Roboto Bold"
+   id="flowSpan3779">ttp:/</flowSpan>/</flowPara></flowRoot>  </g>
 </svg>

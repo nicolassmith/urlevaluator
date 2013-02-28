@@ -12,7 +12,6 @@ import android.widget.Toast;
 
 
 public class UrlEvaluatorActivity extends Activity implements EvaluatorTaskCaller {
-    /** Called when the activity is first created. */	
 	private static final String TAG = "UrlEvaluatorActivity";
 	public static Resources res;
 	private EvaluatorTask evaluator = new GeneralEvaluatorTask(this);
@@ -24,7 +23,6 @@ public class UrlEvaluatorActivity extends Activity implements EvaluatorTaskCalle
         
         Uri inputUri = getIntent().getData();
         Log.d(TAG, "data = " + inputUri);
-        // Toast.makeText(UrlEvaluatorActivity.this, inputUri.toString(), Toast.LENGTH_LONG).show();
         
         evaluator.execute(inputUri.toString());
         
