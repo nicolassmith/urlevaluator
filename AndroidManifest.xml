@@ -23,6 +23,14 @@
                 <data android:scheme="http" android:host="m.google.com" />
                 <data android:scheme="http" android:host="g.co" />
                 <data android:scheme="http" android:host="tinyurl.com" />
+                <data android:scheme="http" android:host="instagr.am" />
+                <data android:scheme="http" android:host="fb.me" />
+                <data android:scheme="http" android:host="ow.ly" />
+                <data android:scheme="http" android:host="politi.co" />
+                <data android:scheme="http" android:host="buff.ly" />
+                <data android:scheme="http" android:host="t.co" />
+                <data android:scheme="http" android:host="nyti.ms" />
+                <data android:scheme="http" android:host="qr.ae" />
             </intent-filter>
         </activity>
     </application>
