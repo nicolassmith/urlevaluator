@@ -32,6 +32,7 @@
                 <data android:scheme="http" android:host="nyti.ms" />
                 <data android:scheme="http" android:host="qr.ae" />
                 <data android:scheme="http" android:host="youtu.be" />
+                <data android:scheme="http" android:host="git.io" />
             </intent-filter>
         </activity>
     </application>
