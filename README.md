@@ -7,7 +7,7 @@ This app is designed to be a short-url unshortener. Android sometimes launches a
 
 This app will take the short url, unshorten it, and give it back so that android can launch the correct application.
 
-The code is open source and available on github: https://github.com/nicolassmith/urlevaluator
+The code is open source and available on github: http://git.io/oRGECw
 
 Get it on the Play Store: 
 https://play.google.com/store/apps/details?id=com.github.nicolassmith.urlevaluator
