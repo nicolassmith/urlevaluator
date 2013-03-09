@@ -5,6 +5,7 @@ import java.net.*;
 import android.util.Log;
 
 public class GeneralEvaluatorTask extends EvaluatorTask {
+	/** this is the most general version of the EvaluatorTask class **/
 	
 	private static final String TAG = "GeneralEvaluatorTask";
 
