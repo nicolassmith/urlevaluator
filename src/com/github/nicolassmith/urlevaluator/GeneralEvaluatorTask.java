@@ -19,6 +19,7 @@ public class GeneralEvaluatorTask extends EvaluatorTask {
 		int responseCode = 0;
 		String location = null;
 		try {
+			// thanks to StackExchange user syb0rg
 			con = (HttpURLConnection)(new URL( uriString ).openConnection());
 			con.setInstanceFollowRedirects( false );
 			con.connect();
