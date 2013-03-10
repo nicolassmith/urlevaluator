@@ -16,13 +16,17 @@ public class UrlEvaluatorActivity extends Activity implements
 		EvaluatorTaskCaller {
 	private static final String TAG = "UrlEvaluatorActivity";
 
+	private Toast evaluatingToast;
+
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
 		// grab the URL from the intent data
 		Uri inputUri = getIntent().getData();
-		Log.d(TAG, "data = " + inputUri);
+
+		evaluatingToast = Toast.makeText(this, getString(R.string.evaluating, inputUri));
+		evaluatingToast.show();
 
 		// send it to an EvaluatorTask
 		(new GeneralEvaluatorTask(this)).execute(inputUri.toString());
@@ -32,6 +36,8 @@ public class UrlEvaluatorActivity extends Activity implements
 	/** Called by the {@link EvaluatorTask} when the task is done. **/
 	@Override
 	public void onTaskCompleted(String output) {
+		evaluatingToast.cancel();
+
 		if (output == null) {
 			// nothing returned
 			makeToast(getString(R.string.couldnt_evaluate)); // couldn't evaluate
