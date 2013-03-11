@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.widget.Toast;
 
 /**
@@ -15,6 +16,7 @@ public class UrlEvaluatorActivity extends Activity implements
 	private static final String TAG = "UrlEvaluatorActivity";
 
 	private Toast evaluatingToast;
+	private Toast conclusionToast;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -56,6 +58,9 @@ public class UrlEvaluatorActivity extends Activity implements
 	}
 
 	private void makeToast(String toastText) {
-		Toast.makeText(UrlEvaluatorActivity.this, toastText, Toast.LENGTH_LONG).show();
+		conclusionToast = Toast.makeText(UrlEvaluatorActivity.this, toastText, Toast.LENGTH_LONG);
+		// get the toast out of the way of the application select menu
+		conclusionToast.setGravity(Gravity.BOTTOM|Gravity.CENTER_HORIZONTAL, 0, 0);
+		conclusionToast.show();
 	}
 }
