@@ -4,8 +4,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
-import android.widget.TextView;
 import android.widget.Toast;
 
 /**
@@ -21,11 +19,10 @@ public class UrlEvaluatorActivity extends Activity implements
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.main);
 		// grab the URL from the intent data
 		Uri inputUri = getIntent().getData();
 
-		evaluatingToast = Toast.makeText(this, getString(R.string.evaluating, inputUri));
+		evaluatingToast = Toast.makeText(this, getString(R.string.evaluating, inputUri), Toast.LENGTH_LONG);
 		evaluatingToast.show();
 
 		// send it to an EvaluatorTask
@@ -48,16 +45,8 @@ public class UrlEvaluatorActivity extends Activity implements
 		// a URL was returned
 		String toastText = getString(R.string.evaluated_as, output);
 		makeToast(toastText);
-
-		updateText(output);
 		makeNewUriIntent(output);
-
 		finish();
-	}
-
-	public void updateText(String newText) {
-		TextView evaluatingUrl = (TextView) this.findViewById(R.id.evaluating_url);
-		evaluatingUrl.setText(newText);
 	}
 	
 	public void makeNewUriIntent(String uri) {
