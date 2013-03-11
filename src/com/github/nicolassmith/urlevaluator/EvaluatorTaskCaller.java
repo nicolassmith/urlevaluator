@@ -1,6 +1,6 @@
 package com.github.nicolassmith.urlevaluator;
 
+/** Defines an interface for classes that can call an {@link EvaluatorTask}. **/
 public interface EvaluatorTaskCaller {
-	/** defines an interface for Classes that can call an EvaluatorTask **/
 	public void onTaskCompleted(String output);
 }

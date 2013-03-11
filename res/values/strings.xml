@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="hello">Evaluating URL…</string>
     <string name="app_name">Short URL Evaluator</string>
-    <string name="couldnt_eval">Couldn\'t evaluate URL.</string>
-    <string name="evaluated_as">Evaluated as</string>
+    <string name="evaluating">Evaluating URL…</string>
+    <string name="evaluated_as">Evaluated as: %s</string>
+    <string name="couldnt_evaluate">Couldn\'t evaluate URL.</string>
 
 </resources>
