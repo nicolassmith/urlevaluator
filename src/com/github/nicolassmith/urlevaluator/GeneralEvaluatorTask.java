@@ -4,9 +4,9 @@ import java.io.IOException;
 import java.net.*;
 import android.util.Log;
 
+/** This is the most general version of the {@link EvaluatorTask} class. **/
 public class GeneralEvaluatorTask extends EvaluatorTask {
-	/** this is the most general version of the EvaluatorTask class **/
-	
+
 	private static final String TAG = "GeneralEvaluatorTask";
 
 	public GeneralEvaluatorTask(EvaluatorTaskCaller passedCaller) {
@@ -20,11 +20,11 @@ public class GeneralEvaluatorTask extends EvaluatorTask {
 		String location = null;
 		try {
 			// thanks to StackExchange user syb0rg
-			con = (HttpURLConnection)(new URL( uriString ).openConnection());
-			con.setInstanceFollowRedirects( false );
+			con = (HttpURLConnection) (new URL(uriString).openConnection());
+			con.setInstanceFollowRedirects(false);
 			con.connect();
 			responseCode = con.getResponseCode();
-			location  = con.getHeaderField( "Location" );
+			location = con.getHeaderField("Location");
 		} catch (MalformedURLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -32,10 +32,11 @@ public class GeneralEvaluatorTask extends EvaluatorTask {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		Log.d(TAG,"response code = " + responseCode);
-		Log.d(TAG,"Location = " + location);
+		if (Log.isLoggable(TAG, Log.DEBUG)) {
+			Log.d(TAG, "response code = " + responseCode);
+			Log.d(TAG, "Location = " + location);
+		}
 
-        	return location;
+		return location;
 	}
-
 }
