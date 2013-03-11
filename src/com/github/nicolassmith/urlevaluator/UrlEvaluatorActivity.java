@@ -2,17 +2,18 @@ package com.github.nicolassmith.urlevaluator;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.content.res.Resources;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
-
-public class UrlEvaluatorActivity extends Activity implements EvaluatorTaskCaller {
-	/** This is the Activity that is called when a short URL intent is thrown by the Android OS **/
+/**
+ * This is the {@link Activity} that is called when a short URL intent is thrown
+ * by the Android OS.
+ **/
+public class UrlEvaluatorActivity extends Activity implements
+		EvaluatorTaskCaller {
 	private static final String TAG = "UrlEvaluatorActivity";
 
 	@Override
@@ -28,9 +29,9 @@ public class UrlEvaluatorActivity extends Activity implements EvaluatorTaskCalle
 		// jumps to onTaskCompleted asynchronously
 	}
 
+	/** Called by the {@link EvaluatorTask} when the task is done. **/
 	@Override
 	public void onTaskCompleted(String output) {
-		/** called by the EvaluatorTask when the Task is done **/
 		if (output == null) {
 			// nothing returned
 			makeToast(getString(R.string.couldnt_evaluate)); // couldn't evaluate
@@ -53,7 +54,7 @@ public class UrlEvaluatorActivity extends Activity implements EvaluatorTaskCalle
 		evaluatingUrl.setText(newText);
 	}
 	
-	public void makeNewUriIntent(String uri){
+	public void makeNewUriIntent(String uri) {
 		Intent i = new Intent(Intent.ACTION_VIEW);
 		i.setData(Uri.parse(uri));
 		startActivity(i);
