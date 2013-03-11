@@ -2,15 +2,15 @@ package com.github.nicolassmith.urlevaluator;
 
 import android.os.AsyncTask;
 
-abstract class EvaluatorTask extends AsyncTask<String,Void,String>{
-	/** Abstract class for evaluator service for various short URL providers **/
-	
-	EvaluatorTaskCaller caller;
-	
-	public EvaluatorTask(EvaluatorTaskCaller passedCaller){
+/** Abstract class for evaluator service for various short URL providers **/
+abstract class EvaluatorTask extends AsyncTask<String, Void, String> {
+
+	private final EvaluatorTaskCaller caller;
+
+	public EvaluatorTask(EvaluatorTaskCaller passedCaller) {
 		caller = passedCaller;
 	}
-	
+
 	public abstract String evaluate(String arg);
 
 	@Override
@@ -23,6 +23,4 @@ abstract class EvaluatorTask extends AsyncTask<String,Void,String>{
 	protected String doInBackground(String... arg) {
 		return evaluate(arg[0]);
 	}
-	
-	
 }
