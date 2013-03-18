@@ -94,12 +94,22 @@ def fetchDomains():
         services = tree.findall('.//service')
         return [s.text for s in services]
 
+def readExtraDomains():
+    """ Loads from file extra shorteners that we like. """
+    
+    f = open('ExtraShorteners.txt','r')
+    domains = [l.rstrip() for l in f.readlines()]
+    f.close()
+    return domains
+
 def main(filename):
     """ Entry point for the script. """
 
     f = open(filename, mode='w')
     domains = fetchDomains()
-    manstr = formManifest(domains)
+    extraDomains = readExtraDomains()
+    allDomains = sorted(set(domains + extraDomains))
+    manstr = formManifest(allDomains)
     f.write(manstr.encode('UTF-8'))
     f.close()
 
