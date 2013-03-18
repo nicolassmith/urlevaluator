@@ -15,7 +15,7 @@ AUTHOR
 
 VERSION
 
-    0.1
+    0.2
 """
 
 import sys, string
@@ -23,12 +23,17 @@ from string import Template
 from urllib2 import Request, urlopen, URLError
 import xml.etree.ElementTree as ET
 
+TEMPLATE_FILE = 'AndroidManifest.template'
+EXTRAS_FILE   = 'ExtraShorteners.txt'
+DOMAIN_FMT    = '''\
+                <data android:scheme="http"  android:host="${domain}" />
+                <data android:scheme="https" android:host="${domain}" />'''
+SERVICE_URL   = 'http://api.longurl.org/v2/services'
+
 def formOne(domain):
     """ Format the intents for one host. """
     
-    fmt='''                <data android:scheme="http"  android:host="${domain}" />
-                <data android:scheme="https" android:host="${domain}" />'''
-    t = Template(fmt)
+    t = Template(DOMAIN_FMT)
     return t.substitute(domain=domain)
 
 def formMany(domains):
@@ -37,45 +42,19 @@ def formMany(domains):
     return string.join(map(formOne, domains), '\n')    # Simply concatenate with newlines
 
 def formManifest(domains):
-    """ Defines the template for the Manifest and splices in the domains. """
+    """ Read the template from file and splices in the domains. """
 
-    fmt='''<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.github.nicolassmith.urlevaluator"
-    android:versionCode="4"
-    android:versionName="1.3" >
+    f = open(TEMPLATE_FILE, 'r')
+    fmt = f.read()
+    f.close()
 
-    <uses-sdk android:minSdkVersion="10" android:targetSdkVersion="17" />
-    <uses-permission android:name="android.permission.INTERNET" />
-
-    <application
-        android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name" 
-        android:allowBackup="false">
-        <activity
-            android:name=".UrlEvaluatorActivity"
-            android:label="@string/app_name"
-            android:excludeFromRecents="true"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-${domainData}
-            </intent-filter>
-        </activity>
-    </application>
-
-</manifest>
-'''
     t = Template(fmt)
     return t.substitute(domainData=formMany(domains))
 
 def fetchDomains():
     """ We get the list of domains from longurl.org """
     
-    url = 'http://api.longurl.org/v2/services'
-    req = Request(url)
+    req = Request(SERVICE_URL)
     try:
         response = urlopen(req)
     except URLError as e:
@@ -92,12 +71,12 @@ def fetchDomains():
         
         tree = ET.fromstring(xmlstr)
         services = tree.findall('.//service')
-        return [s.text for s in services]
+        return [s.text for s in services if s.attrib['regex']=='']
 
 def readExtraDomains():
     """ Loads from file extra shorteners that we like. """
     
-    f = open('ExtraShorteners.txt','r')
+    f = open(EXTRAS_FILE,'r')
     domains = [l.rstrip() for l in f.readlines()]
     f.close()
     return domains

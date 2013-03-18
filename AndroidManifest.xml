@@ -140,8 +140,6 @@
                 <data android:scheme="https" android:host="dfl8.me" />
                 <data android:scheme="http"  android:host="digbig.com" />
                 <data android:scheme="https" android:host="digbig.com" />
-                <data android:scheme="http"  android:host="digg.com" />
-                <data android:scheme="https" android:host="digg.com" />
                 <data android:scheme="http"  android:host="disq.us" />
                 <data android:scheme="https" android:host="disq.us" />
                 <data android:scheme="http"  android:host="dld.bz" />

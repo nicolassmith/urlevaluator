@@ -2,7 +2,6 @@ buff.ly
 g.co
 git.io
 instagr.am
-j.mp
 m.google.com
 qr.ae
 reut.rs
