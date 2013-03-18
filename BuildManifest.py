@@ -2,7 +2,7 @@
 """
 SYNOPSIS
 
-    BuildManifest > AndroidManifest.xml
+    BuildManifest path/to/AndroidManifest.xml
 
 DESCRIPTION
 
