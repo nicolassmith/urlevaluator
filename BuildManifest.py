@@ -44,6 +44,7 @@ def formManifest(domains,templateString):
     """ Read the template from file and splices in the domains. """
 
     t = Template(templateString)
+    print str(len(domains)) + " domains supported."
     return t.substitute(domainData=formMany(domains))
 
 def fetchDomains():
