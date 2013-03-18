@@ -410,6 +410,8 @@
                 <data android:scheme="https" android:host="redirx.com" />
                 <data android:scheme="http"  android:host="retwt.me" />
                 <data android:scheme="https" android:host="retwt.me" />
+                <data android:scheme="http"  android:host="reut.rs" />
+                <data android:scheme="https" android:host="reut.rs" />
                 <data android:scheme="http"  android:host="ri.ms" />
                 <data android:scheme="https" android:host="ri.ms" />
                 <data android:scheme="http"  android:host="rickroll.it" />
@@ -512,6 +514,8 @@
                 <data android:scheme="https" android:host="tbd.ly" />
                 <data android:scheme="http"  android:host="tcrn.ch" />
                 <data android:scheme="https" android:host="tcrn.ch" />
+                <data android:scheme="http"  android:host="techre.vu" />
+                <data android:scheme="https" android:host="techre.vu" />
                 <data android:scheme="http"  android:host="tgr.me" />
                 <data android:scheme="https" android:host="tgr.me" />
                 <data android:scheme="http"  android:host="tgr.ph" />
@@ -562,6 +566,8 @@
                 <data android:scheme="https" android:host="tra.kz" />
                 <data android:scheme="http"  android:host="trunc.it" />
                 <data android:scheme="https" android:host="trunc.it" />
+                <data android:scheme="http"  android:host="tumblr.co" />
+                <data android:scheme="https" android:host="tumblr.co" />
                 <data android:scheme="http"  android:host="twhub.com" />
                 <data android:scheme="https" android:host="twhub.com" />
                 <data android:scheme="http"  android:host="twirl.at" />
