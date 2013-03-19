@@ -97,7 +97,9 @@ def main(filename):
 
     (first, last) = readManiSplitOnComments(filename)
 
-    newMani = first + START_COMMENT + '\n' + formMany(allDomains) + '\n' + END_COMMENT + last
+    newMani = first + START_COMMENT + '\n' + \
+        formMany(allDomains) + '\n' + \
+        '                ' + END_COMMENT + last
 
     f = open(filename, mode='w')
     f.write(newMani.encode('UTF-8'))
