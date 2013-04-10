@@ -1,6 +1,8 @@
 package com.github.nicolassmith.urlevaluator;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -15,8 +17,7 @@ public class UrlEvaluatorActivity extends Activity implements
 		EvaluatorTaskCaller {
 	private static final String TAG = "UrlEvaluatorActivity";
 
-	private Toast evaluatingToast;
-	private Toast conclusionToast;
+	private ProgressDialog evaluatingDialog;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -24,18 +25,24 @@ public class UrlEvaluatorActivity extends Activity implements
 		// grab the URL from the intent data
 		Uri inputUri = getIntent().getData();
 
-		evaluatingToast = Toast.makeText(this, getString(R.string.evaluating, inputUri), Toast.LENGTH_LONG);
-		evaluatingToast.show();
+		final EvaluatorTask task = new GeneralEvaluatorTask(this);
+		evaluatingDialog = ProgressDialog.show(this, null, getString(R.string.evaluating, inputUri), true, true, new DialogInterface.OnCancelListener() {
+			@Override
+			public void onCancel(DialogInterface dialogInterface) {
+				task.cancel(true);
+				finish();
+			}
+		});
 
 		// send it to an EvaluatorTask
-		(new GeneralEvaluatorTask(this)).execute(inputUri.toString());
+		task.execute(inputUri.toString());
 		// jumps to onTaskCompleted asynchronously
 	}
 
 	/** Called by the {@link EvaluatorTask} when the task is done. **/
 	@Override
 	public void onTaskCompleted(String output) {
-		evaluatingToast.cancel();
+		evaluatingDialog.dismiss();
 
 		if (output == null) {
 			// nothing returned
@@ -50,7 +57,7 @@ public class UrlEvaluatorActivity extends Activity implements
 		makeNewUriIntent(output);
 		finish();
 	}
-	
+
 	public void makeNewUriIntent(String uri) {
 		Intent i = new Intent(Intent.ACTION_VIEW);
 		i.setData(Uri.parse(uri));
@@ -58,7 +65,7 @@ public class UrlEvaluatorActivity extends Activity implements
 	}
 
 	private void makeToast(String toastText) {
-		conclusionToast = Toast.makeText(UrlEvaluatorActivity.this, toastText, Toast.LENGTH_LONG);
+		Toast conclusionToast = Toast.makeText(UrlEvaluatorActivity.this, toastText, Toast.LENGTH_LONG);
 		// get the toast out of the way of the application select menu
 		conclusionToast.setGravity(Gravity.BOTTOM|Gravity.CENTER_HORIZONTAL, 0, 0);
 		conclusionToast.show();
