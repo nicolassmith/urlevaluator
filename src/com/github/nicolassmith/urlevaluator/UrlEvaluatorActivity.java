@@ -28,7 +28,14 @@ public class UrlEvaluatorActivity extends Activity implements
 		evaluatingToast.show();
 
 		// send it to an EvaluatorTask
-		(new GeneralEvaluatorTask(this)).execute(inputUri.toString());
+		EvaluatorTask evaluatorTask;
+		// check if it's a woot-check url
+		if (WootcheckEvaluatorTask.isSupportedHost(inputUri.getHost())) {
+			evaluatorTask = new WootcheckEvaluatorTask(this);
+		} else {
+			evaluatorTask = new GeneralEvaluatorTask(this);
+		}
+		evaluatorTask.execute(inputUri.toString());
 		// jumps to onTaskCompleted asynchronously
 	}
 

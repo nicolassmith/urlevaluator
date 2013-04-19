@@ -651,6 +651,8 @@
                 <data android:scheme="https" android:host="wipi.es" />
                 <data android:scheme="http"  android:host="wp.me" />
                 <data android:scheme="https" android:host="wp.me" />
+                <data android:scheme="http"  android:host="www.jdoqocy.com" />
+                <data android:scheme="https" android:host="www.jdoqocy.com" />
                 <data android:scheme="http"  android:host="x.vu" />
                 <data android:scheme="https" android:host="x.vu" />
                 <data android:scheme="http"  android:host="xr.com" />
