@@ -311,6 +311,8 @@
                 <data android:scheme="https" android:host="miniurl.com" />
                 <data android:scheme="http"  android:host="minurl.fr" />
                 <data android:scheme="https" android:host="minurl.fr" />
+                <data android:scheme="http"  android:host="mitne.ws" />
+                <data android:scheme="https" android:host="mitne.ws" />
                 <data android:scheme="http"  android:host="mke.me" />
                 <data android:scheme="https" android:host="mke.me" />
                 <data android:scheme="http"  android:host="moby.to" />
