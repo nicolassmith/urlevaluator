@@ -1,7 +1,11 @@
 package com.github.nicolassmith.urlevaluator;
 
 import java.io.IOException;
-import java.net.*;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.List;
+
 import android.util.Log;
 
 /** This is the most general version of the {@link EvaluatorTask} class. **/
@@ -22,6 +26,7 @@ public class GeneralEvaluatorTask extends EvaluatorTask {
 			// thanks to StackExchange user syb0rg
 			con = (HttpURLConnection) (new URL(uriString).openConnection());
 			con.setInstanceFollowRedirects(false);
+			con.setRequestMethod("HEAD");
 			con.connect();
 			responseCode = con.getResponseCode();
 			location = con.getHeaderField("Location");
@@ -39,4 +44,5 @@ public class GeneralEvaluatorTask extends EvaluatorTask {
 
 		return location;
 	}
+
 }
