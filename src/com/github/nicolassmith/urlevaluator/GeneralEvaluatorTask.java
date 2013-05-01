@@ -27,6 +27,9 @@ public class GeneralEvaluatorTask extends EvaluatorTask {
 			con = (HttpURLConnection) (new URL(uriString).openConnection());
 			con.setInstanceFollowRedirects(false);
 			con.setRequestMethod("HEAD");
+			// This turns off gzip compression, because some servers lie!
+			// And this confuses the HttpEngine decoder.
+			con.setRequestProperty("Accept-Encoding", "identity");
 			con.connect();
 			responseCode = con.getResponseCode();
 			location = con.getHeaderField("Location");
