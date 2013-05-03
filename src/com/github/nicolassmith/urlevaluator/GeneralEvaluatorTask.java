@@ -22,7 +22,7 @@ public class GeneralEvaluatorTask extends EvaluatorTask {
 		int responseCode = 0;
 		String location = null;
 		try {
-			// thanks to StackExchange user syb0rg
+			// thanks to StackOverflow user inno (question 2659000)
 			con = (HttpURLConnection) (new URL(uriString).openConnection());
 			con.setInstanceFollowRedirects(false);
 			con.setRequestMethod("HEAD");
