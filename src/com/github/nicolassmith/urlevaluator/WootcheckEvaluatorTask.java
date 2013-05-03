@@ -1,7 +1,6 @@
 package com.github.nicolassmith.urlevaluator;
 
 import java.util.Arrays;
-
 import android.net.Uri;
 
 public class WootcheckEvaluatorTask extends EvaluatorTask {
