@@ -6,7 +6,7 @@ import android.net.Uri;
 public class WootcheckEvaluatorTask extends EvaluatorTask {
 
 	private static final String TAG = "WootcheckEvaluatorTask";
-	private static final String[] HOSTS = new String[] {"www.jdoqocy.com"};
+	private static final String[] HOSTS = new String[] {"www.jdoqocy.com","www.kqzyfj.com"};
 	
 	public WootcheckEvaluatorTask(EvaluatorTaskCaller passedCaller) {
 		super(passedCaller);

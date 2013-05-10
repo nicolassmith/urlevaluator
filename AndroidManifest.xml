@@ -93,6 +93,8 @@
                 <data android:scheme="https" android:host="bizj.us" />
                 <data android:scheme="http"  android:host="bloat.me" />
                 <data android:scheme="https" android:host="bloat.me" />
+                <data android:scheme="http"  android:host="bloom.bg" />
+                <data android:scheme="https" android:host="bloom.bg" />
                 <data android:scheme="http"  android:host="bravo.ly" />
                 <data android:scheme="https" android:host="bravo.ly" />
                 <data android:scheme="http"  android:host="bsa.ly" />
@@ -343,6 +345,10 @@
                 <data android:scheme="https" android:host="nutshellurl.com" />
                 <data android:scheme="http"  android:host="nxy.in" />
                 <data android:scheme="https" android:host="nxy.in" />
+                <data android:scheme="http"  android:host="nym.ag" />
+                <data android:scheme="https" android:host="nym.ag" />
+                <data android:scheme="http"  android:host="nyr.kr" />
+                <data android:scheme="https" android:host="nyr.kr" />
                 <data android:scheme="http"  android:host="nyti.ms" />
                 <data android:scheme="https" android:host="nyti.ms" />
                 <data android:scheme="http"  android:host="o-x.fr" />
@@ -365,6 +371,8 @@
                 <data android:scheme="https" android:host="orz.se" />
                 <data android:scheme="http"  android:host="ow.ly" />
                 <data android:scheme="https" android:host="ow.ly" />
+                <data android:scheme="http"  android:host="oxford.ly" />
+                <data android:scheme="https" android:host="oxford.ly" />
                 <data android:scheme="http"  android:host="ping.fm" />
                 <data android:scheme="https" android:host="ping.fm" />
                 <data android:scheme="http"  android:host="pli.gs" />
@@ -653,6 +661,8 @@
                 <data android:scheme="https" android:host="wp.me" />
                 <data android:scheme="http"  android:host="www.jdoqocy.com" />
                 <data android:scheme="https" android:host="www.jdoqocy.com" />
+                <data android:scheme="http"  android:host="www.kqzyfj.com" />
+                <data android:scheme="https" android:host="www.kqzyfj.com" />
                 <data android:scheme="http"  android:host="x.vu" />
                 <data android:scheme="https" android:host="x.vu" />
                 <data android:scheme="http"  android:host="xr.com" />
