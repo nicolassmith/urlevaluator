@@ -411,6 +411,8 @@
                 <data android:scheme="https" android:host="readthis.ca" />
                 <data android:scheme="http"  android:host="reallytinyurl.com" />
                 <data android:scheme="https" android:host="reallytinyurl.com" />
+                <data android:scheme="http"  android:host="redd.it" />
+                <data android:scheme="https" android:host="redd.it" />
                 <data android:scheme="http"  android:host="redir.ec" />
                 <data android:scheme="https" android:host="redir.ec" />
                 <data android:scheme="http"  android:host="redirects.ca" />
