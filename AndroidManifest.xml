@@ -327,6 +327,8 @@
                 <data android:scheme="https" android:host="myloc.me" />
                 <data android:scheme="http"  android:host="myurl.in" />
                 <data android:scheme="https" android:host="myurl.in" />
+                <data android:scheme="http"  android:host="mzl.la" />
+                <data android:scheme="https" android:host="mzl.la" />
                 <data android:scheme="http"  android:host="n.pr" />
                 <data android:scheme="https" android:host="n.pr" />
                 <data android:scheme="http"  android:host="nbc.co" />
