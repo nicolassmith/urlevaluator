@@ -363,6 +363,8 @@
                 <data android:scheme="https" android:host="omf.gd" />
                 <data android:scheme="http"  android:host="omoikane.net" />
                 <data android:scheme="https" android:host="omoikane.net" />
+                <data android:scheme="http"  android:host="on.cc.com" />
+                <data android:scheme="https" android:host="on.cc.com" />
                 <data android:scheme="http"  android:host="on.cnn.com" />
                 <data android:scheme="https" android:host="on.cnn.com" />
                 <data android:scheme="http"  android:host="on.mktw.net" />
