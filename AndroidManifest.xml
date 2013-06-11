@@ -53,10 +53,14 @@
                 <data android:scheme="https" android:host="a.nf" />
                 <data android:scheme="http"  android:host="aa.cx" />
                 <data android:scheme="https" android:host="aa.cx" />
+                <data android:scheme="http"  android:host="abcn.ws" />
+                <data android:scheme="https" android:host="abcn.ws" />
                 <data android:scheme="http"  android:host="abcurl.net" />
                 <data android:scheme="https" android:host="abcurl.net" />
                 <data android:scheme="http"  android:host="ad.vu" />
                 <data android:scheme="https" android:host="ad.vu" />
+                <data android:scheme="http"  android:host="adct.me" />
+                <data android:scheme="https" android:host="adct.me" />
                 <data android:scheme="http"  android:host="adf.ly" />
                 <data android:scheme="https" android:host="adf.ly" />
                 <data android:scheme="http"  android:host="adjix.com" />
@@ -67,8 +71,14 @@
                 <data android:scheme="https" android:host="all.fuseurl.com" />
                 <data android:scheme="http"  android:host="alturl.com" />
                 <data android:scheme="https" android:host="alturl.com" />
+                <data android:scheme="http"  android:host="amba.to" />
+                <data android:scheme="https" android:host="amba.to" />
                 <data android:scheme="http"  android:host="amzn.to" />
                 <data android:scheme="https" android:host="amzn.to" />
+                <data android:scheme="http"  android:host="aol.it" />
+                <data android:scheme="https" android:host="aol.it" />
+                <data android:scheme="http"  android:host="apne.ws" />
+                <data android:scheme="https" android:host="apne.ws" />
                 <data android:scheme="http"  android:host="ar.gy" />
                 <data android:scheme="https" android:host="ar.gy" />
                 <data android:scheme="http"  android:host="arst.ch" />
@@ -143,6 +153,10 @@
                 <data android:scheme="https" android:host="cutt.us" />
                 <data android:scheme="http"  android:host="dai.ly" />
                 <data android:scheme="https" android:host="dai.ly" />
+                <data android:scheme="http"  android:host="dd.tt" />
+                <data android:scheme="https" android:host="dd.tt" />
+                <data android:scheme="http"  android:host="de.tk" />
+                <data android:scheme="https" android:host="de.tk" />
                 <data android:scheme="http"  android:host="decenturl.com" />
                 <data android:scheme="https" android:host="decenturl.com" />
                 <data android:scheme="http"  android:host="dfl8.me" />
@@ -217,6 +231,8 @@
                 <data android:scheme="https" android:host="gl.am" />
                 <data android:scheme="http"  android:host="go.9nl.com" />
                 <data android:scheme="https" android:host="go.9nl.com" />
+                <data android:scheme="http"  android:host="go.com" />
+                <data android:scheme="https" android:host="go.com" />
                 <data android:scheme="http"  android:host="go.ign.com" />
                 <data android:scheme="https" android:host="go.ign.com" />
                 <data android:scheme="http"  android:host="go.usa.gov" />
@@ -237,6 +253,8 @@
                 <data android:scheme="https" android:host="href.in" />
                 <data android:scheme="http"  android:host="hsblinks.com" />
                 <data android:scheme="https" android:host="hsblinks.com" />
+                <data android:scheme="http"  android:host="ht.ly" />
+                <data android:scheme="https" android:host="ht.ly" />
                 <data android:scheme="http"  android:host="htxt.it" />
                 <data android:scheme="https" android:host="htxt.it" />
                 <data android:scheme="http"  android:host="huff.to" />
@@ -261,6 +279,8 @@
                 <data android:scheme="https" android:host="its.my" />
                 <data android:scheme="http"  android:host="ix.lt" />
                 <data android:scheme="https" android:host="ix.lt" />
+                <data android:scheme="http"  android:host="j-tv.me" />
+                <data android:scheme="https" android:host="j-tv.me" />
                 <data android:scheme="http"  android:host="j.mp" />
                 <data android:scheme="https" android:host="j.mp" />
                 <data android:scheme="http"  android:host="jijr.com" />
@@ -271,6 +291,8 @@
                 <data android:scheme="https" android:host="kl.am" />
                 <data android:scheme="http"  android:host="klck.me" />
                 <data android:scheme="https" android:host="klck.me" />
+                <data android:scheme="http"  android:host="kon.gg" />
+                <data android:scheme="https" android:host="kon.gg" />
                 <data android:scheme="http"  android:host="korta.nu" />
                 <data android:scheme="https" android:host="korta.nu" />
                 <data android:scheme="http"  android:host="krunchd.com" />
@@ -343,6 +365,8 @@
                 <data android:scheme="https" android:host="nbc.co" />
                 <data android:scheme="http"  android:host="nblo.gs" />
                 <data android:scheme="https" android:host="nblo.gs" />
+                <data android:scheme="http"  android:host="newspr.es" />
+                <data android:scheme="https" android:host="newspr.es" />
                 <data android:scheme="http"  android:host="nn.nf" />
                 <data android:scheme="https" android:host="nn.nf" />
                 <data android:scheme="http"  android:host="not.my" />
@@ -375,6 +399,8 @@
                 <data android:scheme="https" android:host="on.cc.com" />
                 <data android:scheme="http"  android:host="on.cnn.com" />
                 <data android:scheme="https" android:host="on.cnn.com" />
+                <data android:scheme="http"  android:host="on.fb.me" />
+                <data android:scheme="https" android:host="on.fb.me" />
                 <data android:scheme="http"  android:host="on.mktw.net" />
                 <data android:scheme="https" android:host="on.mktw.net" />
                 <data android:scheme="http"  android:host="onforb.es" />
@@ -383,6 +409,8 @@
                 <data android:scheme="https" android:host="orz.se" />
                 <data android:scheme="http"  android:host="ow.ly" />
                 <data android:scheme="https" android:host="ow.ly" />
+                <data android:scheme="http"  android:host="owl.li" />
+                <data android:scheme="https" android:host="owl.li" />
                 <data android:scheme="http"  android:host="oxford.ly" />
                 <data android:scheme="https" android:host="oxford.ly" />
                 <data android:scheme="http"  android:host="ping.fm" />
@@ -459,8 +487,12 @@
                 <data android:scheme="https" android:host="safe.mn" />
                 <data android:scheme="http"  android:host="sameurl.com" />
                 <data android:scheme="https" android:host="sameurl.com" />
+                <data android:scheme="http"  android:host="sbn.to" />
+                <data android:scheme="https" android:host="sbn.to" />
                 <data android:scheme="http"  android:host="scan.me" />
                 <data android:scheme="https" android:host="scan.me" />
+                <data android:scheme="http"  android:host="scendai.ly" />
+                <data android:scheme="https" android:host="scendai.ly" />
                 <data android:scheme="http"  android:host="sdut.us" />
                 <data android:scheme="https" android:host="sdut.us" />
                 <data android:scheme="http"  android:host="shar.es" />
@@ -477,6 +509,8 @@
                 <data android:scheme="https" android:host="shortlinks.co.uk" />
                 <data android:scheme="http"  android:host="shorturl.com" />
                 <data android:scheme="https" android:host="shorturl.com" />
+                <data android:scheme="http"  android:host="shout.lt" />
+                <data android:scheme="https" android:host="shout.lt" />
                 <data android:scheme="http"  android:host="shout.to" />
                 <data android:scheme="https" android:host="shout.to" />
                 <data android:scheme="http"  android:host="show.my" />
@@ -515,6 +549,8 @@
                 <data android:scheme="https" android:host="sp2.ro" />
                 <data android:scheme="http"  android:host="spedr.com" />
                 <data android:scheme="https" android:host="spedr.com" />
+                <data android:scheme="http"  android:host="spoti.fi" />
+                <data android:scheme="https" android:host="spoti.fi" />
                 <data android:scheme="http"  android:host="srnk.net" />
                 <data android:scheme="https" android:host="srnk.net" />
                 <data android:scheme="http"  android:host="srs.li" />
@@ -545,6 +581,10 @@
                 <data android:scheme="https" android:host="tgr.me" />
                 <data android:scheme="http"  android:host="tgr.ph" />
                 <data android:scheme="https" android:host="tgr.ph" />
+                <data android:scheme="http"  android:host="thebea.st" />
+                <data android:scheme="https" android:host="thebea.st" />
+                <data android:scheme="http"  android:host="ti.me" />
+                <data android:scheme="https" android:host="ti.me" />
                 <data android:scheme="http"  android:host="tighturl.com" />
                 <data android:scheme="https" android:host="tighturl.com" />
                 <data android:scheme="http"  android:host="tiniuri.com" />
@@ -565,6 +605,8 @@
                 <data android:scheme="https" android:host="tk." />
                 <data android:scheme="http"  android:host="tl.gd" />
                 <data android:scheme="https" android:host="tl.gd" />
+                <data android:scheme="http"  android:host="tmblr.co" />
+                <data android:scheme="https" android:host="tmblr.co" />
                 <data android:scheme="http"  android:host="tmi.me" />
                 <data android:scheme="https" android:host="tmi.me" />
                 <data android:scheme="http"  android:host="tnij.org" />
@@ -589,10 +631,22 @@
                 <data android:scheme="https" android:host="tr.im" />
                 <data android:scheme="http"  android:host="tra.kz" />
                 <data android:scheme="https" android:host="tra.kz" />
+                <data android:scheme="http"  android:host="trendmic.ro" />
+                <data android:scheme="https" android:host="trendmic.ro" />
+                <data android:scheme="http"  android:host="trg.li" />
+                <data android:scheme="https" android:host="trg.li" />
+                <data android:scheme="http"  android:host="trib.al" />
+                <data android:scheme="https" android:host="trib.al" />
+                <data android:scheme="http"  android:host="trim.li" />
+                <data android:scheme="https" android:host="trim.li" />
                 <data android:scheme="http"  android:host="trunc.it" />
                 <data android:scheme="https" android:host="trunc.it" />
                 <data android:scheme="http"  android:host="tumblr.co" />
                 <data android:scheme="https" android:host="tumblr.co" />
+                <data android:scheme="http"  android:host="twb.io" />
+                <data android:scheme="https" android:host="twb.io" />
+                <data android:scheme="http"  android:host="twb.ly" />
+                <data android:scheme="https" android:host="twb.ly" />
                 <data android:scheme="http"  android:host="twhub.com" />
                 <data android:scheme="https" android:host="twhub.com" />
                 <data android:scheme="http"  android:host="twirl.at" />
@@ -621,6 +675,8 @@
                 <data android:scheme="https" android:host="ulu.lu" />
                 <data android:scheme="http"  android:host="updating.me" />
                 <data android:scheme="https" android:host="updating.me" />
+                <data android:scheme="http"  android:host="ur.ly" />
+                <data android:scheme="https" android:host="ur.ly" />
                 <data android:scheme="http"  android:host="ur1.ca" />
                 <data android:scheme="https" android:host="ur1.ca" />
                 <data android:scheme="http"  android:host="url.az" />
@@ -677,12 +733,16 @@
                 <data android:scheme="https" android:host="wipi.es" />
                 <data android:scheme="http"  android:host="wp.me" />
                 <data android:scheme="https" android:host="wp.me" />
+                <data android:scheme="http"  android:host="wp4r.ch" />
+                <data android:scheme="https" android:host="wp4r.ch" />
                 <data android:scheme="http"  android:host="www.jdoqocy.com" />
                 <data android:scheme="https" android:host="www.jdoqocy.com" />
                 <data android:scheme="http"  android:host="www.kqzyfj.com" />
                 <data android:scheme="https" android:host="www.kqzyfj.com" />
                 <data android:scheme="http"  android:host="x.vu" />
                 <data android:scheme="https" android:host="x.vu" />
+                <data android:scheme="http"  android:host="xmt.me" />
+                <data android:scheme="https" android:host="xmt.me" />
                 <data android:scheme="http"  android:host="xr.com" />
                 <data android:scheme="https" android:host="xr.com" />
                 <data android:scheme="http"  android:host="xrl.in" />
@@ -713,6 +773,8 @@
                 <data android:scheme="https" android:host="yuarel.com" />
                 <data android:scheme="http"  android:host="z0p.de" />
                 <data android:scheme="https" android:host="z0p.de" />
+                <data android:scheme="http"  android:host="zd.net" />
+                <data android:scheme="https" android:host="zd.net" />
                 <data android:scheme="http"  android:host="zi.ma" />
                 <data android:scheme="https" android:host="zi.ma" />
                 <data android:scheme="http"  android:host="zi.mu" />
