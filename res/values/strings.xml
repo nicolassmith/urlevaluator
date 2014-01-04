@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">Short URL Evaluator</string>
-    <string name="evaluating">Evaluating URL…</string>
+    <string name="evaluating">Evaluating URL…\n%s</string>
     <string name="evaluated_as">Evaluated as: %s</string>
     <string name="couldnt_evaluate">Couldn\'t evaluate URL.</string>
 
