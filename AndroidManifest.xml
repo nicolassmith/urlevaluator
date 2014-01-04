@@ -153,6 +153,8 @@
                 <data android:scheme="https" android:host="cutt.us" />
                 <data android:scheme="http"  android:host="dai.ly" />
                 <data android:scheme="https" android:host="dai.ly" />
+                <data android:scheme="http"  android:host="db.tt" />
+                <data android:scheme="https" android:host="db.tt" />
                 <data android:scheme="http"  android:host="dd.tt" />
                 <data android:scheme="https" android:host="dd.tt" />
                 <data android:scheme="http"  android:host="de.tk" />
@@ -201,6 +203,8 @@
                 <data android:scheme="https" android:host="firsturl.de" />
                 <data android:scheme="http"  android:host="firsturl.net" />
                 <data android:scheme="https" android:host="firsturl.net" />
+                <data android:scheme="http"  android:host="fit.tt" />
+                <data android:scheme="https" android:host="fit.tt" />
                 <data android:scheme="http"  android:host="flic.kr" />
                 <data android:scheme="https" android:host="flic.kr" />
                 <data android:scheme="http"  android:host="flq.us" />
@@ -437,6 +441,8 @@
                 <data android:scheme="https" android:host="qr.ae" />
                 <data android:scheme="http"  android:host="qte.me" />
                 <data android:scheme="https" android:host="qte.me" />
+                <data android:scheme="http"  android:host="qttr.at" />
+                <data android:scheme="https" android:host="qttr.at" />
                 <data android:scheme="http"  android:host="qu.tc" />
                 <data android:scheme="https" android:host="qu.tc" />
                 <data android:scheme="http"  android:host="qy.fi" />
@@ -583,6 +589,8 @@
                 <data android:scheme="https" android:host="tgr.ph" />
                 <data android:scheme="http"  android:host="thebea.st" />
                 <data android:scheme="https" android:host="thebea.st" />
+                <data android:scheme="http"  android:host="thndr.it" />
+                <data android:scheme="https" android:host="thndr.it" />
                 <data android:scheme="http"  android:host="ti.me" />
                 <data android:scheme="https" android:host="ti.me" />
                 <data android:scheme="http"  android:host="tighturl.com" />
