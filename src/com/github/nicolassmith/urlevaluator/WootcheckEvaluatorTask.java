@@ -1,12 +1,10 @@
 package com.github.nicolassmith.urlevaluator;
 
-import java.util.Arrays;
 import android.net.Uri;
 
-public class WootcheckEvaluatorTask extends EvaluatorTask {
+public class WootcheckEvaluatorTask extends HostSpecificEvaluatorTask {
 
 	private static final String TAG = "WootcheckEvaluatorTask";
-	private static final String[] HOSTS = new String[] {"www.jdoqocy.com","www.kqzyfj.com"};
 	
 	public WootcheckEvaluatorTask(EvaluatorTaskCaller passedCaller) {
 		super(passedCaller);
@@ -18,9 +16,13 @@ public class WootcheckEvaluatorTask extends EvaluatorTask {
 		// so no need to make a HTTP request
 		return Uri.parse(inputURLString).getQueryParameter("url");
 	}
-	
-	public static boolean isSupportedHost(String host) {
-		return Arrays.asList(HOSTS).contains(host);
+
+	@Override
+	public String[] supportedHosts() {
+		// define the hosts for this evaluator
+		return new String[] {"www.jdoqocy.com","www.kqzyfj.com"};
 	}
+	
+	
 
 }

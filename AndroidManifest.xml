@@ -461,6 +461,8 @@
                 <data android:scheme="https" android:host="redd.it" />
                 <data android:scheme="http"  android:host="redir.ec" />
                 <data android:scheme="https" android:host="redir.ec" />
+                <data android:scheme="http"  android:host="redirect.tinyurl.com" />
+                <data android:scheme="https" android:host="redirect.tinyurl.com" />
                 <data android:scheme="http"  android:host="redirects.ca" />
                 <data android:scheme="https" android:host="redirects.ca" />
                 <data android:scheme="http"  android:host="redirx.com" />

@@ -56,5 +56,6 @@ db.tt
 fit.tt
 qttr.at
 thndr.it
+redirect.tinyurl.com
 www.jdoqocy.com
 www.kqzyfj.com

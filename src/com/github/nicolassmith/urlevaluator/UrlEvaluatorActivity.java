@@ -1,5 +1,9 @@
 package com.github.nicolassmith.urlevaluator;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
@@ -25,17 +29,7 @@ public class UrlEvaluatorActivity extends Activity implements
 		// grab the URL from the intent data
 		Uri inputUri = getIntent().getData();
 
-		// send it to an EvaluatorTask
-		EvaluatorTask taskChoice;
-		
-		// check if it's a woot-check url
-		if (WootcheckEvaluatorTask.isSupportedHost(inputUri.getHost())) {
-			taskChoice = new WootcheckEvaluatorTask(this);
-		} else {
-			taskChoice = new GeneralEvaluatorTask(this);
-		}
-		
-		final EvaluatorTask task = taskChoice;
+		final EvaluatorTask task = chooseEvaluator(inputUri.getHost(),true);
 		
 		evaluatingDialog = ProgressDialog.show(this, null, getString(R.string.evaluating, inputUri), true, true, new DialogInterface.OnCancelListener() {
 			@Override
@@ -48,6 +42,32 @@ public class UrlEvaluatorActivity extends Activity implements
 		// send it to an EvaluatorTask
 		task.execute(inputUri.toString());
 		// jumps to onTaskCompleted asynchronously
+	}
+
+	public EvaluatorTask chooseEvaluator(String hostName,boolean allowRedirector) {
+		// the default choice for the evaluator task
+		EvaluatorTask taskChoice = new GeneralEvaluatorTask(this);
+		
+		// list of host-specific evaluators
+		List<HostSpecificEvaluatorTask> hostEvaluators = new ArrayList<HostSpecificEvaluatorTask>();
+		
+		hostEvaluators.add(new WootcheckEvaluatorTask(this));
+		hostEvaluators.add(new TinyUrlRedirectEvaluatorTask(this));
+
+		// we want to make sure we don't give a MRET if we are being called by a MRET
+		if (allowRedirector){
+			hostEvaluators.add(new MultipleRedirectEvaluatorTask(this));
+		}
+		
+		// look for a match in the available host specific evaluators
+		for(HostSpecificEvaluatorTask hostEvaluator : hostEvaluators){
+			if(hostEvaluator.isSupportedHost(hostName)){
+				// we've found a matching host, set it as our choice and break out of loop
+				taskChoice = hostEvaluator;
+				break;
+			}
+		}
+		return taskChoice;
 	}
 
 	/** Called by the {@link EvaluatorTask} when the task is done. **/
