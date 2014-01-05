@@ -203,8 +203,6 @@
                 <data android:scheme="https" android:host="firsturl.de" />
                 <data android:scheme="http"  android:host="firsturl.net" />
                 <data android:scheme="https" android:host="firsturl.net" />
-                <data android:scheme="http"  android:host="fit.tt" />
-                <data android:scheme="https" android:host="fit.tt" />
                 <data android:scheme="http"  android:host="flic.kr" />
                 <data android:scheme="https" android:host="flic.kr" />
                 <data android:scheme="http"  android:host="flq.us" />
@@ -273,6 +271,8 @@
                 <data android:scheme="https" android:host="icanhaz.com" />
                 <data android:scheme="http"  android:host="idek.net" />
                 <data android:scheme="https" android:host="idek.net" />
+                <data android:scheme="http"  android:host="ift.tt" />
+                <data android:scheme="https" android:host="ift.tt" />
                 <data android:scheme="http"  android:host="ilix.in" />
                 <data android:scheme="https" android:host="ilix.in" />
                 <data android:scheme="http"  android:host="instagr.am" />
