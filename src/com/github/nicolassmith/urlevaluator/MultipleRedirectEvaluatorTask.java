@@ -24,12 +24,10 @@ public class MultipleRedirectEvaluatorTask extends HostSpecificEvaluatorTask {
 		
 		// do a single evaluation
 		String evaluated = singleEvaluator.evaluate(uriStringIn);
-		//Log.d(TAG, "evaluated as = " + evaluated);
 		
-		// evaluate recursively until the answer doesn't change
-		if(evaluated == null || evaluated.equals(uriStringIn)){
-			//Log.d(TAG, "found match, returning");
-			return evaluated;
+		// evaluate recursively until we don't get a redirect
+		if(evaluated == null){
+			return uriStringIn;
 		} else {
 			return this.evaluate(evaluated);
 		}

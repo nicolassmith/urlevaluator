@@ -10,8 +10,7 @@ import android.util.Log;
 /** This is the simplest version of the {@link EvaluatorTask} class. **/
 public class GeneralEvaluatorTask extends EvaluatorTask {
 
-	private static final String USER_AGENT = "Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.4; en-US; rv:1.9.2.2) Gecko/20100316 Firefox/3.6.2";
-	private static final int HTTP_OK_RESPONSE = 200;
+	private static final int HTTP_MOVED_RESPONSE = 301;
 	private static final String TAG = "GeneralEvaluatorTask";
 
 	public GeneralEvaluatorTask(EvaluatorTaskCaller passedCaller) {
@@ -31,14 +30,9 @@ public class GeneralEvaluatorTask extends EvaluatorTask {
 			// This turns off gzip compression, because some servers lie!
 			// And this confuses the HttpEngine decoder.
 			con.setRequestProperty("Accept-Encoding", "identity");
-			// hide the fact that we are a mobile device, so we don't get a redirection to mobile pages
-			con.setRequestProperty("User-Agent", USER_AGENT);
 			con.connect();
 			responseCode = con.getResponseCode();
-			if (responseCode == HTTP_OK_RESPONSE){
-				// we are not being redirected
-				target = uriString;
-			} else {
+			if (responseCode == HTTP_MOVED_RESPONSE){
 				target = con.getHeaderField("Location");
 			}
 		} catch (MalformedURLException e) {
