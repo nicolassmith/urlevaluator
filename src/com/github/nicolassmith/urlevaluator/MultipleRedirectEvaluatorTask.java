@@ -7,11 +7,9 @@ public class MultipleRedirectEvaluatorTask extends HostSpecificEvaluatorTask {
 
 	private static final String TAG = "MultipleRedirectEvaluatorTask";
 	private EvaluatorTask singleEvaluator;
-	private EvaluatorTaskCaller caller;
 	
 	public MultipleRedirectEvaluatorTask(EvaluatorTaskCaller passedCaller) {
 		super(passedCaller);
-		caller = passedCaller;
 	}
 
 	@Override

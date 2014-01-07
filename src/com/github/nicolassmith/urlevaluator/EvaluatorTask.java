@@ -5,7 +5,7 @@ import android.os.AsyncTask;
 /** Abstract class for evaluator service for various short URL providers **/
 abstract class EvaluatorTask extends AsyncTask<String, Void, String> {
 
-	private final EvaluatorTaskCaller caller;
+	protected final EvaluatorTaskCaller caller;
 
 	public EvaluatorTask(EvaluatorTaskCaller passedCaller) {
 		caller = passedCaller;
