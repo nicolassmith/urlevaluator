@@ -11,10 +11,10 @@ public class WootcheckEvaluatorTask extends HostSpecificEvaluatorTask {
 	}
 
 	@Override
-	public String evaluate(String inputURLString) {
+	public Uri evaluate(Uri inputUri) {
 		// these redirectors actually include the URL in the query string,
 		// so no need to make a HTTP request
-		return Uri.parse(inputURLString).getQueryParameter("url");
+		return Uri.parse(inputUri.getQueryParameter("url"));
 	}
 
 	@Override

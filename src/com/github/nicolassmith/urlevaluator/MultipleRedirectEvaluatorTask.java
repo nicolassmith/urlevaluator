@@ -5,27 +5,25 @@ import android.util.Log;
 
 public class MultipleRedirectEvaluatorTask extends HostSpecificEvaluatorTask {
 
+	private static final boolean ALLOW_MULTIPLE_REDIRECT_CHOICE = false;
 	private static final String TAG = "MultipleRedirectEvaluatorTask";
-	private EvaluatorTask singleEvaluator;
 	
 	public MultipleRedirectEvaluatorTask(EvaluatorTaskCaller passedCaller) {
 		super(passedCaller);
 	}
 
 	@Override
-	public String evaluate(String uriStringIn) {
+	public Uri evaluate(Uri inputUri) {
 		
-		String hostName = Uri.parse(uriStringIn).getHost();
-
 		// get the right evaluator for the host
-		singleEvaluator = caller.chooseEvaluator(hostName,false);
+		EvaluatorTask singleEvaluator = caller.chooseEvaluator(inputUri.getHost(),ALLOW_MULTIPLE_REDIRECT_CHOICE);
 		
 		// do a single evaluation
-		String evaluated = singleEvaluator.evaluate(uriStringIn);
+		Uri evaluated = singleEvaluator.evaluate(inputUri);
 		
 		// evaluate recursively until we don't get a redirect
 		if(evaluated == null){
-			return uriStringIn;
+			return inputUri;
 		} else {
 			return this.evaluate(evaluated);
 		}

@@ -15,8 +15,8 @@ public class TinyUrlRedirectEvaluatorTask extends HostSpecificEvaluatorTask {
 	}
 
 	@Override
-	public String evaluate(String inputURLString) {
-		return Uri.parse(inputURLString).getQueryParameter("out");
+	public Uri evaluate(Uri inputUri) {
+		return Uri.parse(inputUri.getQueryParameter("out"));
 	}
 
 }

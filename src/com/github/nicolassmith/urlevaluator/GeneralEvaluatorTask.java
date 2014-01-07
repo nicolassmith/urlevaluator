@@ -5,6 +5,7 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+import android.net.Uri;
 import android.util.Log;
 
 /** This is the simplest version of the {@link EvaluatorTask} class. **/
@@ -18,13 +19,14 @@ public class GeneralEvaluatorTask extends EvaluatorTask {
 	}
 
 	@Override
-	public String evaluate(String uriString) {
+	public Uri evaluate(Uri inputUri) {
 		HttpURLConnection con;
 		int responseCode = 0;
 		String target = null;
+		String location = null;
 		try {
 			// thanks to StackOverflow user inno (question 2659000)
-			con = (HttpURLConnection) (new URL(uriString).openConnection());
+			con = (HttpURLConnection) (new URL(inputUri.toString()).openConnection());
 			con.setInstanceFollowRedirects(false);
 			con.setRequestMethod("HEAD");
 			// This turns off gzip compression, because some servers lie!
@@ -48,7 +50,12 @@ public class GeneralEvaluatorTask extends EvaluatorTask {
 			Log.d(TAG, "Location = " + location);
 		}
 
-		return target;
+		if (target != null){
+			return Uri.parse(target);
+		} else {
+			return null;
+		}
+		
 	}
 
 }
