@@ -32,8 +32,9 @@ public class GeneralEvaluatorTask extends EvaluatorTask {
 			con.setRequestProperty("Accept-Encoding", "identity");
 			con.connect();
 			responseCode = con.getResponseCode();
+			location = con.getHeaderField("Location");
 			if (responseCode == HTTP_MOVED_RESPONSE){
-				target = con.getHeaderField("Location");
+				target = location;
 			}
 		} catch (MalformedURLException e) {
 			// TODO Auto-generated catch block
@@ -44,7 +45,7 @@ public class GeneralEvaluatorTask extends EvaluatorTask {
 		}
 		if (Log.isLoggable(TAG, Log.DEBUG)) {
 			Log.d(TAG, "response code = " + responseCode);
-			Log.d(TAG, "Location = " + target);
+			Log.d(TAG, "Location = " + location);
 		}
 
 		return target;
