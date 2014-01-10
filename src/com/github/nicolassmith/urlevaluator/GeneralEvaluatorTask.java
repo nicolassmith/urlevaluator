@@ -11,7 +11,7 @@ import android.util.Log;
 /** This is the simplest version of the {@link EvaluatorTask} class. **/
 public class GeneralEvaluatorTask extends EvaluatorTask {
 
-	private static final int HTTP_MOVED_RESPONSE = 301;
+	private static final int HTTP_SEEOTHER_RESPONSE = 303;
 	private static final String TAG = "GeneralEvaluatorTask";
 
 	public GeneralEvaluatorTask(EvaluatorTaskCaller passedCaller) {
@@ -35,7 +35,7 @@ public class GeneralEvaluatorTask extends EvaluatorTask {
 			con.connect();
 			responseCode = con.getResponseCode();
 			location = con.getHeaderField("Location");
-			if (responseCode == HTTP_MOVED_RESPONSE){
+			if (responseCode != HTTP_SEEOTHER_RESPONSE){
 				target = location;
 			}
 		} catch (MalformedURLException e) {
