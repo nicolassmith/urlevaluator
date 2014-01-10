@@ -1,7 +1,6 @@
 package com.github.nicolassmith.urlevaluator;
 
 import android.net.Uri;
-import android.util.Log;
 
 public class MultipleRedirectEvaluatorTask extends HostSpecificEvaluatorTask {
 
