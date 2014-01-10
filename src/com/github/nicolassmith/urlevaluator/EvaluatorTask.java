@@ -24,4 +24,10 @@ abstract class EvaluatorTask extends AsyncTask<Uri, Void, Uri> {
 	protected Uri doInBackground(Uri... arg) {
 		return evaluate(arg[0]);
 	}
+
+	@Override
+	protected void onCancelled() {
+		super.onCancelled();
+		caller.onTaskCanceled();
+	}
 }

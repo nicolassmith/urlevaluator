@@ -15,6 +15,11 @@ public class MultipleRedirectEvaluatorTask extends HostSpecificEvaluatorTask {
 	@Override
 	public Uri evaluate(Uri inputUri) {
 		
+		// Has this task been canceled?
+		if (this.isCancelled()){
+			return null;
+		}
+		
 		// get the right evaluator for the host
 		EvaluatorTask singleEvaluator = caller.chooseEvaluator(inputUri.getHost(),ALLOW_MULTIPLE_REDIRECT_CHOICE);
 		
