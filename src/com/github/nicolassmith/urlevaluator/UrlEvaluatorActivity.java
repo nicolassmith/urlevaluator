@@ -19,6 +19,7 @@ import android.widget.Toast;
 public class UrlEvaluatorActivity extends Activity implements
 		EvaluatorTaskCaller {
 	
+	private static final String TEST_FLAG = "thisisonlyatest";
 	private static final String TAG = "UrlEvaluatorActivity";
 	private ProgressDialog evaluatingDialog;
 	private static final boolean ALLOW_TASK_INTERRUPT = true;
@@ -32,13 +33,18 @@ public class UrlEvaluatorActivity extends Activity implements
 
 		final EvaluatorTask task = chooseEvaluator(inputUri,ALLOW_MULTIPLE_REDIRECT_CHOICE);
 		
-		evaluatingDialog = ProgressDialog.show(this, null, getString(R.string.evaluating, inputUri), true, true, new DialogInterface.OnCancelListener() {
-			@Override
-			public void onCancel(DialogInterface dialogInterface) {
-				task.cancel(ALLOW_TASK_INTERRUPT);
-				finish();
-			}
-		});
+		// ActivityUnitTestCase crashes if a dialog is shown :-(
+		if (getIntent().getBooleanExtra(TEST_FLAG, false)){
+			evaluatingDialog = new ProgressDialog(this);
+		} else {
+			evaluatingDialog = ProgressDialog.show(this, null, getString(R.string.evaluating, inputUri), true, true, new DialogInterface.OnCancelListener() {
+				@Override
+				public void onCancel(DialogInterface dialogInterface) {
+					task.cancel(ALLOW_TASK_INTERRUPT);
+					finish();
+				}
+			});
+		}
 
 		// send it to an EvaluatorTask
 		task.execute(inputUri);
