@@ -6,5 +6,5 @@ import android.net.Uri;
 public interface EvaluatorTaskCaller {
 	public void onTaskCompleted(Uri result);
 	public void onTaskCanceled();
-	public EvaluatorTask chooseEvaluator(String hostName,boolean allowRedirector); 
+	public EvaluatorTask chooseEvaluator(Uri uri,boolean allowRedirector); 
 }

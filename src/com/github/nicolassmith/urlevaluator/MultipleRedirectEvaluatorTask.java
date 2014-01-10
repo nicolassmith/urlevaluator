@@ -21,7 +21,7 @@ public class MultipleRedirectEvaluatorTask extends HostSpecificEvaluatorTask {
 		}
 		
 		// get the right evaluator for the host
-		EvaluatorTask singleEvaluator = caller.chooseEvaluator(inputUri.getHost(),ALLOW_MULTIPLE_REDIRECT_CHOICE);
+		EvaluatorTask singleEvaluator = caller.chooseEvaluator(inputUri,ALLOW_MULTIPLE_REDIRECT_CHOICE);
 		
 		// do a single evaluation
 		Uri evaluated = singleEvaluator.evaluate(inputUri);

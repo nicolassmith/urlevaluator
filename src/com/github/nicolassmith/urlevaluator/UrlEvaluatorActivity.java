@@ -30,7 +30,7 @@ public class UrlEvaluatorActivity extends Activity implements
 		// grab the URL from the intent data
 		Uri inputUri = getIntent().getData();
 
-		final EvaluatorTask task = chooseEvaluator(inputUri.getHost(),ALLOW_MULTIPLE_REDIRECT_CHOICE);
+		final EvaluatorTask task = chooseEvaluator(inputUri,ALLOW_MULTIPLE_REDIRECT_CHOICE);
 		
 		evaluatingDialog = ProgressDialog.show(this, null, getString(R.string.evaluating, inputUri), true, true, new DialogInterface.OnCancelListener() {
 			@Override
@@ -74,7 +74,7 @@ public class UrlEvaluatorActivity extends Activity implements
 		finish();
 	}
 
-	public EvaluatorTask chooseEvaluator(String hostName,boolean allowRedirector) {
+	public EvaluatorTask chooseEvaluator(Uri uri,boolean allowRedirector) {
 		// the default choice for the evaluator task
 		EvaluatorTask taskChoice = new GeneralEvaluatorTask(this);
 		
@@ -91,7 +91,7 @@ public class UrlEvaluatorActivity extends Activity implements
 		
 		// look for a match in the available host specific evaluators
 		for(HostSpecificEvaluatorTask hostEvaluator : hostEvaluators){
-			if(hostEvaluator.isSupportedHost(hostName)){
+			if(hostEvaluator.isSupportedHost(uri.getHost())){
 				// we've found a matching host, set it as our choice and break out of loop
 				taskChoice = hostEvaluator;
 				break;
