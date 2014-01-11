@@ -51,6 +51,7 @@ public class GeneralEvaluatorTask extends EvaluatorTask {
 		}
 
 		if (target != null){
+			if (Log.isLoggable(TAG, Log.DEBUG)) { Log.d(TAG, "returning target: " + target); }
 			return Uri.parse(target);
 		} else {
 			return null;

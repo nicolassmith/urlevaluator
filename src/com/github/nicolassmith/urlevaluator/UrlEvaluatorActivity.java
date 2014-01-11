@@ -9,6 +9,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Gravity;
 import android.widget.Toast;
 
@@ -45,7 +46,7 @@ public class UrlEvaluatorActivity extends Activity implements
 				}
 			});
 		}
-
+		if (Log.isLoggable(TAG, Log.DEBUG)) {Log.d(TAG, "going to execute");}
 		// send it to an EvaluatorTask
 		task.execute(inputUri);
 		// jumps to onTaskCompleted asynchronously
@@ -54,6 +55,8 @@ public class UrlEvaluatorActivity extends Activity implements
 	/** Called by the {@link EvaluatorTask} when the task is done. **/
 	@Override
 	public void onTaskCompleted(Uri output) {
+		if (Log.isLoggable(TAG, Log.DEBUG)) { Log.d(TAG, "task completed"); }
+		
 		evaluatingDialog.dismiss();
 	
 		if (output == null) {
@@ -66,6 +69,7 @@ public class UrlEvaluatorActivity extends Activity implements
 		// a URL was returned
 		String toastText = getString(R.string.evaluated_as, output);
 		try {
+			if (Log.isLoggable(TAG, Log.DEBUG)) { Log.d(TAG, "making intent"); }
 			makeNewUriIntent(output);
 		} catch (android.content.ActivityNotFoundException e) {
 			// URL not recognized by Android
