@@ -79,11 +79,6 @@ public class UrlEvaluatorActivity extends Activity implements
 		finish();
 	}
 
-	@Override
-	public void onTaskCanceled() {
-		finish();
-	}
-
 	public EvaluatorTask chooseEvaluator(Uri uri,boolean allowRedirector) {
 		// the default choice for the evaluator task
 		EvaluatorTask taskChoice = new GeneralEvaluatorTask(this);
