@@ -11,7 +11,6 @@ import android.util.Log;
 /** This is the simplest version of the {@link EvaluatorTask} class. **/
 public class GeneralEvaluatorTask extends EvaluatorTask {
 
-	private static final int HTTP_SEEOTHER_RESPONSE = 303;
 	private static final String TAG = "GeneralEvaluatorTask";
 
 	public GeneralEvaluatorTask(EvaluatorTaskCaller passedCaller) {
@@ -22,7 +21,6 @@ public class GeneralEvaluatorTask extends EvaluatorTask {
 	public Uri evaluate(Uri inputUri) {
 		HttpURLConnection con;
 		int responseCode = 0;
-		String target = null;
 		String location = null;
 		try {
 			// thanks to StackOverflow user inno (question 2659000)
@@ -35,9 +33,6 @@ public class GeneralEvaluatorTask extends EvaluatorTask {
 			con.connect();
 			responseCode = con.getResponseCode();
 			location = con.getHeaderField("Location");
-			if (responseCode != HTTP_SEEOTHER_RESPONSE){
-				target = location;
-			}
 		} catch (MalformedURLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -45,18 +40,16 @@ public class GeneralEvaluatorTask extends EvaluatorTask {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		if (Log.isLoggable(TAG, Log.DEBUG)) {
+		//if (Log.isLoggable(TAG, Log.DEBUG)) {
 			Log.d(TAG, "response code = " + responseCode);
 			Log.d(TAG, "Location = " + location);
-		}
+		//}
 
-		if (target != null){
-			if (Log.isLoggable(TAG, Log.DEBUG)) { Log.d(TAG, "returning target: " + target); }
-			return Uri.parse(target);
-		} else {
+		if (location == null){
 			return null;
+		} else {
+			return Uri.parse(location);
 		}
-		
 	}
 
 }

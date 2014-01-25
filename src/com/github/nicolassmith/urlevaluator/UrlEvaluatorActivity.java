@@ -5,6 +5,7 @@ import java.util.List;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
@@ -116,5 +117,10 @@ public class UrlEvaluatorActivity extends Activity implements
 		// get the toast out of the way of the application select menu
 		conclusionToast.setGravity(Gravity.BOTTOM|Gravity.CENTER_HORIZONTAL, 0, 0);
 		conclusionToast.show();
+	}
+
+	@Override
+	public Context getContext() {
+		return this;
 	}
 }
