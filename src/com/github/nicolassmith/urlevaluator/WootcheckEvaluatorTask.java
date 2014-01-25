@@ -20,7 +20,11 @@ public class WootcheckEvaluatorTask extends HostSpecificEvaluatorTask {
 	@Override
 	public String[] supportedHosts() {
 		// define the hosts for this evaluator
-		return new String[] {"www.jdoqocy.com","www.kqzyfj.com"};
+		return new String[] {"www.jdoqocy.com",
+				             "www.kqzyfj.com",
+				             "www.dpbolvw.net",
+				             "www.tkqlhce.com",
+				             };
 	}
 	
 	
