@@ -40,10 +40,10 @@ public class GeneralEvaluatorTask extends EvaluatorTask {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		//if (Log.isLoggable(TAG, Log.DEBUG)) {
+		if (Log.isLoggable(TAG, Log.DEBUG)) {
 			Log.d(TAG, "response code = " + responseCode);
 			Log.d(TAG, "Location = " + location);
-		//}
+		}
 
 		if (location == null){
 			return null;
