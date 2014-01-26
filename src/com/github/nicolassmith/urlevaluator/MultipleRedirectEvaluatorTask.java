@@ -44,8 +44,8 @@ public class MultipleRedirectEvaluatorTask extends HostSpecificEvaluatorTask {
 	}
 
 	private boolean debugLogEnabled() {
-		//return Log.isLoggable(TAG, Log.DEBUG);
-		return true;
+		return Log.isLoggable(TAG, Log.DEBUG);
+		//return true;
 	}
 
 	private boolean isSupportedUrl(Uri inputUri) {
