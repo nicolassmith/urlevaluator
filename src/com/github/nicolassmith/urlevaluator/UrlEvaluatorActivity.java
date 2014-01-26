@@ -89,6 +89,7 @@ public class UrlEvaluatorActivity extends Activity implements
 		
 		hostEvaluators.add(new WootcheckEvaluatorTask(this));
 		hostEvaluators.add(new TinyUrlRedirectEvaluatorTask(this));
+		hostEvaluators.add(new GoogleQEvaluatorTask(this));
 
 		// we want to make sure we don't give a MRET if we are being called by a MRET
 		if (allowRedirector){

@@ -25,8 +25,8 @@ import xml.etree.ElementTree as ET
 
 EXTRAS_FILE   = 'ExtraShorteners.txt'
 DOMAIN_FMT    = '''\
-                <data android:scheme="http"  android:host="${domain}" />
-                <data android:scheme="https" android:host="${domain}" />'''
+                <data android:scheme="http"  android:host="${domain}" android:pathPattern=".*" />
+                <data android:scheme="https" android:host="${domain}" android:pathPattern=".*" />'''
 SERVICE_URL   = 'http://api.longurl.org/v2/services'
 
 """ These are sentinel values which tell us where to splice """
