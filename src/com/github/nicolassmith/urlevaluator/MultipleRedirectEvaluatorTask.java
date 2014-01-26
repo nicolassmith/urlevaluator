@@ -21,7 +21,7 @@ public class MultipleRedirectEvaluatorTask extends HostSpecificEvaluatorTask {
 	@Override
 	public Uri evaluate(Uri inputUri) {
 		
-		if (Log.isLoggable(TAG, Log.DEBUG)) { Log.d(TAG, "Multiple redirect evaluation of " + inputUri.toString()); }
+		if (debugLogEnabled()) { Log.d(TAG, "Multiple redirect evaluation of " + inputUri.toString()); }
 		
 		// Has this task been canceled?
 		if (this.isCancelled()){
@@ -29,7 +29,7 @@ public class MultipleRedirectEvaluatorTask extends HostSpecificEvaluatorTask {
 		}
 		
 		if (!isSupportedUrl(inputUri)){
-			if (Log.isLoggable(TAG, Log.DEBUG)) { Log.d(TAG, "Uri not handled, stop recursion"); }
+			if (debugLogEnabled()) { Log.d(TAG, "Uri not handled, stop recursion"); }
 			return inputUri;
 		}
 		
@@ -39,8 +39,13 @@ public class MultipleRedirectEvaluatorTask extends HostSpecificEvaluatorTask {
 		// do a single evaluation
 		Uri evaluated = singleEvaluator.evaluate(inputUri);
 
-		if (Log.isLoggable(TAG, Log.DEBUG)) { Log.d(TAG, "evaluated as: " + evaluated + " now going deeper!"); }
+		if (debugLogEnabled()) { Log.d(TAG, "evaluated as: " + evaluated + " now going deeper!"); }
 		return this.evaluate(evaluated);
+	}
+
+	private boolean debugLogEnabled() {
+		//return Log.isLoggable(TAG, Log.DEBUG);
+		return true;
 	}
 
 	private boolean isSupportedUrl(Uri inputUri) {
@@ -53,7 +58,7 @@ public class MultipleRedirectEvaluatorTask extends HostSpecificEvaluatorTask {
 		for (ResolveInfo resolveInfo : resolveList) {
 			if(resolveInfo.activityInfo.name.equals(URL_EVALUATOR_ACTIVITY_NAME)){
 				UriIsSupported = true;
-				if (Log.isLoggable(TAG, Log.DEBUG)) { Log.d(TAG,"confirmed supported uri"); }
+				if (debugLogEnabled()) { Log.d(TAG,"confirmed supported uri"); }
 			}
 		}
 		return UriIsSupported;
