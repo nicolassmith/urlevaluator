@@ -2,8 +2,8 @@
 <manifest
     xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.github.nicolassmith.urlevaluator"
-    android:versionCode="13"
-    android:versionName="2.3">
+    android:versionCode="14"
+    android:versionName="2.3.1">
 
     <uses-sdk android:minSdkVersion="10" android:targetSdkVersion="17" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -87,6 +87,8 @@
                 <data android:scheme="https" android:host="at.wh.gov" />
                 <data android:scheme="http"  android:host="atu.ca" />
                 <data android:scheme="https" android:host="atu.ca" />
+                <data android:scheme="http"  android:host="avc.lu" />
+                <data android:scheme="https" android:host="avc.lu" />
                 <data android:scheme="http"  android:host="azc.cc" />
                 <data android:scheme="https" android:host="azc.cc" />
                 <data android:scheme="http"  android:host="b23.ru" />
@@ -181,6 +183,8 @@
                 <data android:scheme="https" android:host="easyuri.com" />
                 <data android:scheme="http"  android:host="easyurl.net" />
                 <data android:scheme="https" android:host="easyurl.net" />
+                <data android:scheme="http"  android:host="econ.st" />
+                <data android:scheme="https" android:host="econ.st" />
                 <data android:scheme="http"  android:host="eepurl.com" />
                 <data android:scheme="https" android:host="eepurl.com" />
                 <data android:scheme="http"  android:host="eweri.com" />
@@ -503,6 +507,8 @@
                 <data android:scheme="https" android:host="scendai.ly" />
                 <data android:scheme="http"  android:host="sdut.us" />
                 <data android:scheme="https" android:host="sdut.us" />
+                <data android:scheme="http"  android:host="sfy.co" />
+                <data android:scheme="https" android:host="sfy.co" />
                 <data android:scheme="http"  android:host="shar.es" />
                 <data android:scheme="https" android:host="shar.es" />
                 <data android:scheme="http"  android:host="shink.de" />
@@ -677,6 +683,8 @@
                 <data android:scheme="https" android:host="u.mavrev.com" />
                 <data android:scheme="http"  android:host="u.nu" />
                 <data android:scheme="https" android:host="u.nu" />
+                <data android:scheme="http"  android:host="u.pw" />
+                <data android:scheme="https" android:host="u.pw" />
                 <data android:scheme="http"  android:host="u76.org" />
                 <data android:scheme="https" android:host="u76.org" />
                 <data android:scheme="http"  android:host="ub0.cc" />
@@ -745,6 +753,8 @@
                 <data android:scheme="https" android:host="wp.me" />
                 <data android:scheme="http"  android:host="wp4r.ch" />
                 <data android:scheme="https" android:host="wp4r.ch" />
+                <data android:scheme="http"  android:host="wpo.st" />
+                <data android:scheme="https" android:host="wpo.st" />
                 <data android:scheme="http"  android:host="www.dpbolvw.net" />
                 <data android:scheme="https" android:host="www.dpbolvw.net" />
                 <data android:scheme="http"  android:host="www.jdoqocy.com" />
